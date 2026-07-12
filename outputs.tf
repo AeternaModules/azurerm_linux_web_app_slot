@@ -1,3 +1,7 @@
+output "linux_web_app_slots_id" {
+  description = "Map of id values across all linux_web_app_slots, keyed the same as var.linux_web_app_slots"
+  value       = { for k, v in azurerm_linux_web_app_slot.linux_web_app_slots : k => v.id }
+}
 output "linux_web_app_slots_app_metadata" {
   description = "Map of app_metadata values across all linux_web_app_slots, keyed the same as var.linux_web_app_slots"
   value       = { for k, v in azurerm_linux_web_app_slot.linux_web_app_slots : k => v.app_metadata }
