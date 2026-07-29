@@ -41,7 +41,6 @@ resource "azurerm_linux_web_app_slot" "linux_web_app_slots" {
         node_version             = application_stack.value.node_version
         php_version              = application_stack.value.php_version
         python_version           = application_stack.value.python_version
-        ruby_version             = application_stack.value.ruby_version
       }
     }
     dynamic "auto_heal_setting" {
